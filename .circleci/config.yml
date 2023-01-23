@@ -2,7 +2,8 @@ version: 2.1
 
 workflows:
   test-deploy:
-    - test
+    jobs:
+      - test
 
 jobs:
   test:
@@ -11,3 +12,5 @@ jobs:
     steps:
       - checkout
       - run: python --version
+
+# VS Code Extension Version: 1.5.1
